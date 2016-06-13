@@ -1,0 +1,31 @@
+# /etc/apt/sources.list
+
+# Line commented out by installer because it failed to verify:
+#deb http://security.debian.org/ jessie/updates main contrib
+# Line commented out by installer because it failed to verify:
+#deb-src http://security.debian.org/ jessie/updates main contrib
+
+# Basic repositories
+ 
+deb http://ftp.uk.debian.org/debian/ jessie main
+deb-src http://ftp.uk.debian.org/debian/ jessie main
+ 
+deb http://security.debian.org/ jessie/updates main
+deb-src http://security.debian.org/ jessie/updates main
+ 
+# Repositories for jessie-updates, previously known as 'volatile'
+deb http://ftp.uk.debian.org/debian/ jessie-updates main
+deb-src http://ftp.uk.debian.org/debian/ jessie-updates main
+ 
+# For wifi drivers
+deb http://http.debian.net/debian/ jessie main contrib non-free
+# deb http://http.uk.debian.org/debian/ jessie main contrib non-free
+
+# For R backports: The mirror can be modified
+deb http://cran.ma.imperial.ac.uk/bin/linux/debian jessie-cran3/
+ 
+# For Flash Player
+deb http://ftp.us.debian.org/debian jessie contrib
+
+# For Spotify
+deb http://repository.spotify.com stable non-free
