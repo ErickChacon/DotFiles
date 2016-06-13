@@ -9,12 +9,24 @@ call vundle#begin()
 " 'user/repository' format
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox' " colorscheme
+Plugin 'sickill/vim-monokai' " colorscheme
+Plugin 'altercation/vim-colors-solarized' " colorscheme
+Plugin 'junegunn/seoul256.vim' " colorscheme
+Plugin 'nielsmadan/harlequin' " colorscheme
 Plugin 'ervandew/screen' " send selections to be evaluated
 Plugin 'scrooloose/syntastic' " for syntaxis error
 Plugin 'ctrlpvim/ctrlp.vim' " for folders ans files
 Plugin 'Lokaltog/vim-powerline' " powerline
-" Plugin 'Valloric/YouCompleteMe' " autocompletition
+Plugin 'Valloric/YouCompleteMe' " autocompletition
 Plugin 'JuliaLang/julia-vim' " autocompletition
+Plugin 'tpope/vim-surround' " sorround
+Plugin 'tomtom/tcomment_vim' " easy comment
+Plugin 'vimwiki/vimwiki' " notes
+Plugin 'kana/vim-textobj-indent' " copy indented block
+Plugin 'kana/vim-textobj-user' " custom text object
+Plugin 'Yggdroot/indentLine' " show indentation
+Plugin 'SirVer/ultisnips' " snippets 
+Plugin 'honza/vim-snippets' " snippets scripts
 
 " Plugin 'powerline/powerline' " bottom line
 " Plugin 'jalvesaq/Nvim-R' " Vim's support to edit R code 
@@ -63,6 +75,13 @@ set background=dark " incompatible with colorscheme
 " let g:gruvbox_italic=1
 set t_Co=256 " allow 256 colors and use external colorschemes
 colorscheme gruvbox
+" colorscheme monokai
+" colorscheme harlequin
+" let g:solarized_termcolors=256
+" colorscheme solarized
+" let g:seoul256_background = 256
+" colo seoul256
+" set background=dark
 " highlight Normal ctermbg=NONE
 " highlight nonText ctermbg=NONE
 " set tabstop=2       " number of visual spaces per TAB
@@ -176,14 +195,24 @@ let g:Powerline_symbols = 'compatible'
 "Toggle relative numbering, and set to absolute on loss of focus or insert mode
 set rnu
 function! ToggleNumbersOn()
-    set nu!
-        set rnu
-        endfunction
-        function! ToggleRelativeOn()
-            set rnu!
-                set nu
-                endfunction
-                autocmd FocusLost * call ToggleRelativeOn()
-                autocmd FocusGained * call ToggleRelativeOn()
-                autocmd InsertEnter * call ToggleRelativeOn()
-                autocmd InsertLeave * call ToggleRelativeOn()
+  set nu! 
+  set rnu 
+endfunction
+function! ToggleRelativeOn()
+  set rnu!
+  set nu
+endfunction
+autocmd FocusLost * call ToggleRelativeOn()
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleRelativeOn()
+autocmd InsertLeave * call ToggleRelativeOn()
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsListSnippets="<c-l><c-l>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+" let g:UltiSnipsSnippetDirectories=["UltiSnips"]
