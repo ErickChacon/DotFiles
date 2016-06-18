@@ -15,6 +15,14 @@ snippet ret
 return(${1:code})
 endsnippet
 
+snippet setwd "Set workingdir" b
+setwd("${1:`!p snip.rv = os.getcwd()`}")
+endsnippet
+
+snippet sec "Section label" b
+# ${1:SECTION} `!p snip.rv = (72 - len(t[1])) * "-"`  
+endsnippet
+
 snippet mat
 matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})
 endsnippet
