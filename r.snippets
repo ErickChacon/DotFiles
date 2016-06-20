@@ -130,3 +130,23 @@ endsnippet
 snippet ts
 `r paste("#", date(), "------------------------------\n")`
 endsnippet
+
+snippet title "Roxygen description" b
+#' @title ${1:title}.
+#' 
+#' @description
+#' \code{${2:function}} ${3:description}. 
+#' 
+#' @details
+#' ${4:details}.
+#' 
+#' @param ${5:par}.
+#' 
+#' @return ${6:return}.
+#' 
+#' @author ${7:Erick Albacharro Chacon-Montalvan}
+#'
+#' @export
+endsnippet
+
+
