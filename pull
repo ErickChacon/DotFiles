@@ -1,0 +1,18 @@
+#!/bin/bash
+if [ $HOSTNAME == "fub027000002" ]
+then
+  echo "Working at office!"
+  cd ~/Documents/MyRepos/dotfiles/
+  cp bashrc-mint ~/.bashrc 
+else
+  echo "Working at home!"
+  cd ~/Documents/LancsPC/MyRepos/dotfiles/
+  cp sources.list /etc/apt/sources.list 
+  cp Rprofile.site /etc/R/Rprofile.site 
+  cp bashrc-deb ~/.bashrc 
+fi
+cp r.snippets ~/.vim/UltiSnips/r.snippets 
+cp redshift.conf ~/.config/redshift.conf 
+cp tmux.conf ~/.tmux.conf 
+cp unison-default.prf ~/.unison/default.prf 
+cp vimrc ~/.vimrc 
