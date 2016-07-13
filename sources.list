@@ -17,6 +17,9 @@ deb-src http://security.debian.org/ jessie/updates main
 deb http://ftp.uk.debian.org/debian/ jessie-updates main
 deb-src http://ftp.uk.debian.org/debian/ jessie-updates main
  
+# Experimental repository
+# deb http://ftp.uk.debian.org/debian/ experimental main
+
 # For wifi drivers
 deb http://http.debian.net/debian/ jessie main contrib non-free
 # deb http://http.uk.debian.org/debian/ jessie main contrib non-free

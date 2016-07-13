@@ -18,7 +18,7 @@ Plugin 'scrooloose/syntastic' " for syntaxis error
 Plugin 'ctrlpvim/ctrlp.vim' " for folders ans files
 Plugin 'Lokaltog/vim-powerline' " powerline
 Plugin 'Valloric/YouCompleteMe' " autocompletition
-Plugin 'JuliaLang/julia-vim' " autocompletition
+" Plugin 'JuliaLang/julia-vim' " autocompletition
 Plugin 'tpope/vim-surround' " sorround
 Plugin 'tomtom/tcomment_vim' " easy comment
 Plugin 'vimwiki/vimwiki' " notes
@@ -214,5 +214,7 @@ let g:UltiSnipsListSnippets="<c-l><c-l>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsSnippetsDir=[$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 " let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
