@@ -151,7 +151,9 @@ augroup ScreenShellExit
   autocmd User * call <SID>ScreenShellListener()
 augroup END
 
-"let g:ScreenImpl = 'Tmux'
+let g:ScreenImpl = 'Tmux'
+let g:ScreenShellTmuxInitArgs = '-2'
+" let g:ScreenShellExternal = 1
 "nmap <C-c><C-r> :ScreenShell R<cr>
 "nmap <C-c><C-p> :ScreenShell python<cr>
 "nmap <C-c><C-j> :ScreenShell julia<cr>
