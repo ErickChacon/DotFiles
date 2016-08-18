@@ -220,3 +220,6 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 " let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
+" Vimwiki settings
+let g:vimwiki_list = [{'path':'$HOME/Documents/vimwiki'}]
+" , 'path_html':'$HOME/cerebra/export/html'}]
